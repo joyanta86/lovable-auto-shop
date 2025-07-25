@@ -1,4 +1,5 @@
 import { ProductCard } from "./ProductCard";
+import { ShopifyIntegration } from "./ShopifyIntegration";
 import candleImage from "@/assets/product-candle.jpg";
 import serumImage from "@/assets/product-serum.jpg";
 import toteImage from "@/assets/product-tote.jpg";
@@ -14,7 +15,7 @@ const mockProducts = [
     originalPrice: 42,
     image: candleImage,
     category: "Home Decor",
-    shopifyId: "123456789" // This would be replaced with actual Shopify variant ID
+    shopifyId: "" // Replace with your actual Shopify variant ID from fwcsej-se.myshopify.com
   },
   {
     id: "2",
@@ -22,7 +23,7 @@ const mockProducts = [
     price: 65,
     image: serumImage,
     category: "Skincare",
-    shopifyId: "123456790"
+    shopifyId: "" // Replace with your actual Shopify variant ID
   },
   {
     id: "3",
@@ -30,7 +31,7 @@ const mockProducts = [
     price: 48,
     image: toteImage,
     category: "Accessories",
-    shopifyId: "123456791"
+    shopifyId: "" // Replace with your actual Shopify variant ID
   },
   {
     id: "4",
@@ -38,7 +39,7 @@ const mockProducts = [
     price: 89,
     image: diffuserImage,
     category: "Wellness",
-    shopifyId: "123456792"
+    shopifyId: "" // Replace with your actual Shopify variant ID
   },
   {
     id: "5",
@@ -46,7 +47,7 @@ const mockProducts = [
     price: 28,
     image: soapImage,
     category: "Skincare",
-    shopifyId: "123456793"
+    shopifyId: "" // Replace with your actual Shopify variant ID
   },
   {
     id: "6",
@@ -54,7 +55,7 @@ const mockProducts = [
     price: 35,
     image: utensilsImage,
     category: "Home & Kitchen",
-    shopifyId: "123456794"
+    shopifyId: "" // Replace with your actual Shopify variant ID
   }
 ];
 
@@ -62,6 +63,8 @@ export const FeaturedProducts = () => {
   return (
     <section id="products" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
+        <ShopifyIntegration />
+        
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
             Featured Products

@@ -21,14 +21,14 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   const [isWishlisted, setIsWishlisted] = useState(false);
 
   const handleAddToCart = () => {
-    // For now, we'll just show a success message
-    // When Shopify is connected, this will redirect to Shopify checkout
+    // Direct integration with your Shopify store
     if (product.shopifyId) {
-      // Shopify permalink format: https://store.myshopify.com/cart/{variant_id}:1
-      window.open(`https://your-store.myshopify.com/cart/${product.shopifyId}:1`, '_blank');
+      // Shopify permalink format for your store: https://fwcsej-se.myshopify.com/cart/{variant_id}:1
+      window.open(`https://fwcsej-se.myshopify.com/cart/${product.shopifyId}:1`, '_blank');
     } else {
-      // Temporary mock behavior
-      console.log(`Added ${product.name} to cart`);
+      // Fallback for products not yet set up in Shopify
+      console.log(`Add ${product.name} to cart - Shopify variant ID needed`);
+      // You can also implement a toast notification here
     }
   };
 
